@@ -1,7 +1,7 @@
-# CheckoutIQ: PRD v2.0 (The Strategic AI Orchestrator)
-**Enterprise-Grade Monetization, Bayesian Experimentation & Adaptive Brand Governance**
+# CheckoutIQ: PRD v2.1 (The STEP Strategic Framework)
+**AI-Driven Monetization & Global Payment Orchestration**
 
-> "A Head of Product proves leadership by delivering immediate ROI while architecting for future scale. CheckoutIQ is the brain of that strategy."
+> "This PRD utilizes the **STEP Framework** (Segments, Targets, Execution, Prioritization) to demonstrate structured AI Product Management leadership."
 
 **Author:** Saurabh Chawda · Head of Product, Payments (Lead)
 **Status:** PRODUCTION-READY PROTOTYPE
@@ -9,55 +9,65 @@
 
 ---
 
-## 1. Executive Summary
-CheckoutIQ v2.0 is an AI-native monetization platform designed to maximize LTV without sacrificing brand integrity. It moves beyond static A/B testing into a **Real-Time Bayesian Multi-Armed Bandit (MAB)** ecosystem. The platform enforces a "Build Brains, Buy Muscles" strategy—building the intelligence layer natively while orchestrating third-party gateways (Stripe, Adyen, Pix) headlessly.
+## 1. Clarifying Questions & Persona
+*   **Persona:** Acting as the **Head of Product, Payments** for WellTech, a high-growth global wellness scale-up.
+*   **Scope:** Moving from a "Single-Gateway" legacy setup to a "Multi-Gateway AI Orchestrator."
+*   **Constraints:** Must maintain strict PCI DSS SAQ-A compliance and <50ms edge latency.
 
 ---
 
-## 2. Core Strategic Pillars
-
-### Pillar 1: Unified Gateway & Global Scale
-*   **The Problem:** Regional conversion is lost due to lack of local payment methods (LPMs).
-*   **The Solution:** Edge-side Geo-Routing that dynamically injects **Pix (BR)**, **iDEAL (EU)**, and **SEPA (DE)** into the checkout based on user location.
-*   **KPI:** +15% conversion lift in non-US markets.
-
-### Pillar 2: AI-Driven Multi-Armed Bandit (MAB)
-*   **The Problem:** Traditional A/B tests waste 50% of traffic on losing variants for 30 days.
-*   **The Solution:** Thompson Sampling using a Gamma distribution. The AI learns in real-time, funneling traffic to the winner while protecting against "Exploration Floor" starvation.
-*   **The Guardrail:** A composite reward metric combining **Immediate Conversion** and **Day-1 Engagement Density** to protect long-term retention.
-
-### Pillar 3: Brand Orchestration (Vibrant Pro vs. Calm Wellness)
-*   **The Problem:** Acquisition UTMs often lead to a "one-size-fits-all" checkout that mismatches the user's emotional state.
-*   **The Solution:** Dynamic Theme Injection (`data-theme`). High-performance **Vibrant Pro** for performance marketing and high-contrast **Calm Wellness** for organic/referral traffic.
-
-### Pillar 4: Lifecycle Monetization (Immutable Receipt & 1-Click Upsell)
-*   **The Problem:** Post-purchase friction causes high churn and missed AOV opportunities.
-*   **The Solution:** The "Immutable Receipt" pattern. We anchor the user's success first, then present a **1-Click Upsell** protected by an **Atomic State Lock** to prevent double-charges and ensure deterministic state transitions.
+## 2. Overarching Goal
+Maximize **Lifetime Value (LTV)** and **Net Revenue Lift** by deploying a real-time Bayesian experimentation layer that dynamically matches payment methods, value propositions, and visual themes to the user's intent.
 
 ---
 
-## 3. Product Vision & Roadmap (Pillar 5)
-
-| Module | Purpose | Stakeholder Value |
-| :--- | :--- | :--- |
-| **MAB Engine** | Real-time algorithmic oversight and Bayesian regret curves. | **Eng:** Reliability & Transparency. |
-| **Strategic Hypotheses** | PM sandbox for ROI forecasting and cross-functional sync. | **Leadership:** Strategic Alignment. |
-| **Webhook Health** | Infrastructure observability for payment intent reliability. | **Ops:** Zero-Downtime Monitoring. |
+## 3. User Segments
+1.  **The Global Growth PM (Power User):** Needs to launch experiments across 15+ countries without engineering tickets for every new payment method.
+2.  **The Financial Stakeholder (CFO):** Needs to see the real-time MRR lift and Bayesian "Confidence Scores" to justify marketing spend.
+3.  **The High-Intent Payer (End Consumer):** Expects their local payment method (Pix/iDEAL) and a friction-less, theme-appropriate checkout.
 
 ---
 
-## 4. Technical Specifications & Constraints
-
-*   **Performance:** <50ms Time-to-First-Byte (TTFB) for variant assignment via Edge Middleware.
-*   **Security:** Strict PCI DSS SAQ-A compliance; zero raw card data touches the server.
-*   **Accessibility:** WCAG 2.1 AA compliant in both Light and Dark modes.
-*   **Fail-Safe:** Global "Safe Mode" kill switch defaults 100% of traffic to the static Control variant during P1 incidents.
+## 4. Prioritized Pain Points
+*   **Revenue Leakage:** Losing 50% of traffic on suboptimal "Control" variants during traditional 30-day A/B tests.
+*   **Regional Friction:** High decline rates in BR/EU due to lack of local gateway routing.
+*   **Brand Mismatch:** Hard-coded "Vibrant" UIs causing friction for organic "Calm/Wellness" users.
 
 ---
 
-## 5. Success Metrics (OKRs)
+## 5. Execution: The Feature Set
 
-*   **Incremental MRR:** +$250k/qtr projected uplift.
-*   **D1 Engagement Proxy:** >80% core action completion.
-*   **Payment Decline Rate:** <5% through targeted regional dunning tests.
-*   **System Latency:** <200ms end-to-end checkout rendering.
+### Standard Solutions
+*   **Edge Geo-Routing:** Detects user IP at the edge and injects **Pix (BR)**, **iDEAL (EU)**, or **SEPA (DE)** headlessly.
+*   **Atomic State Machine:** Ensures payment transitions (`verifying` -> `success`) are deterministic to prevent double-charges.
+*   **Immutable Receipt Anchoring:** Locks the primary purchase state before presenting a 1-click upsell.
+
+### Moonshot Solutions (The "AI Brain")
+*   **Real-Time Thompson Sampling (MAB):** Instead of static A/B testing, a Multi-Armed Bandit engine uses **Gamma distributions** to learn from every single click, funneling traffic to winners instantly.
+*   **Source-to-Theme Orchestration:** Uses acquisition UTMs to dynamically inject CSS tokens (`data-theme`), switching between **Vibrant Pro** and **Calm Wellness** visuals.
+
+---
+
+## 6. Prioritization Matrix (Impact vs. Effort)
+
+| Feature | Impact | Effort | Priority |
+| :--- | :--- | :--- | :--- |
+| **Edge Geo-Routing** | High | Medium | **P0** (Revenue) |
+| **Bayesian MAB Engine** | High | High | **P0** (The "Brain") |
+| **Dynamic Theming** | Medium | Low | **P1** (UX/Brand) |
+| **Immutable Upsells** | High | Medium | **P1** (AOV Lift) |
+
+---
+
+## 7. Metrics & Success Tracking
+
+### 🌟 North Star Metric (The Goal)
+*   **Incremental MRR Lift:** Targeting +$250k/qtr through real-time allocation to winning variants.
+
+### 🚩 Signpost Metrics (The Indicators)
+*   **Edge Assignment Latency:** Must remain **<50ms TTFB** to prevent bounce.
+*   **Regional Conversion Delta:** Targeting **+18.4% lift** in BR/Pix segments.
+
+### 🛡️ "Do No Harm" Metrics (The Guardrails)
+*   **Day-1 Engagement Density:** If engagement completion drops by **>2%**, the MAB engine auto-triggers the **Safe Mode Kill Switch** to protect long-term retention.
+*   **Payment Success Rate:** Monitoring regional decline thresholds to detect gateway outages instantly.
