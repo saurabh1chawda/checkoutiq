@@ -1,6 +1,6 @@
-# CheckoutIQ v2.0 - Strategic Monetization Orchestrator
+# CheckoutIQ - Strategic Monetization Orchestrator
 
-**CheckoutIQ v2.0** is a high-fidelity live prototype demonstrating the next generation of enterprise monetization platforms. It was designed to solve the friction between immediate revenue growth and long-term retention using AI-driven orchestration.
+**CheckoutIQ** is a high-fidelity live prototype demonstrating the next generation of enterprise monetization platforms. It was designed to solve the friction between immediate revenue growth and long-term retention using AI-driven orchestration.
 
 ---
 
