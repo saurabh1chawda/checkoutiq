@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-welltech-primary: var(--wt-primary);
+  --color-welltech-secondary: var(--wt-secondary);
+  --color-welltech-dark: var(--wt-bg-dark);
+  --color-welltech-card: var(--wt-card-bg);
+  --color-welltech-text: var(--wt-text-main);
+  --color-welltech-muted: var(--wt-text-dim);
+  --color-welltech-border: var(--wt-border);
+  --color-welltech-sidebar: var(--wt-sidebar-bg);
+}
+
+@layer base {
+  :root {
+    /* PRO THEME (Default Dark) */
+    --wt-primary: #00FF41;
+    --wt-primary-rgb: 0, 255, 65;
+    --wt-secondary: #00D1FF;
+    --wt-bg-dark: #0A0A0A;
+    --wt-sidebar-bg: #0A0A0A;
+    --wt-card-bg: #141414;
+    --wt-text-main: #FFFFFF;
+    --wt-text-dim: #94A3B8;
+    --wt-border: rgba(255, 255, 255, 0.1);
+    --wt-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  [data-theme='wellness'] {
+    /* PREMIUM WELLNESS THEME (Light) */
+    --wt-primary: #2D7A5F;     /* Active Teal */
+    --wt-primary-rgb: 45, 122, 95;
+    --wt-secondary: #4CAF50;   /* Sage Green */
+    --wt-bg-dark: #F8FAF9;     /* Off-white Mint */
+    --wt-sidebar-bg: #FFFFFF;  /* Pure White Sidebar */
+    --wt-card-bg: #FFFFFF;     /* Pure White Card */
+    --wt-text-main: #1A2E26;   /* Deep Forest */
+    --wt-text-dim: #4A6358;    /* Muted Sage */
+    --wt-border: rgba(45, 122, 95, 0.1);
+    --wt-shadow-card: 0 10px 40px rgba(26, 46, 38, 0.03), 0 2px 10px rgba(26, 46, 38, 0.02);
+  }
+
+  body {
+    background-color: var(--wt-bg-dark);
+    color: var(--wt-text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+}
+
+.welltech-gradient {
+  background: linear-gradient(to right, var(--wt-primary), var(--wt-secondary));
+}
+
+.welltech-card {
+  background-color: var(--wt-card-bg);
+  border: 1px solid var(--wt-border);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--wt-shadow-card);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tooltip-box {
+  background-color: #1A2E26;
+  color: #FFFFFF;
+  @apply backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-white/10 z-[110];
+}
+
+.modal-overlay {
+  background-color: rgba(10, 10, 10, 0.7);
+  @apply backdrop-blur-xl;
+}
