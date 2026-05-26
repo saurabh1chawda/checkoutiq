@@ -62,8 +62,13 @@ In a modern payments landscape, the competitive advantage is no longer just "int
 
 ---
 
+## 📄 Strategic Documentation
+This project includes a **[Strategic PRD](./PRD.md)** structured using the **STEP Framework** (Segments, Targets, Execution, Prioritization) as used by senior PMs at Google/Meta. It demonstrates how to translate business constraints into AI-native technical features.
+
+---
+
 ## 👤 Author
 **Saurabh Chawda**  
 *Lead Product Manager, Payments & Monetization*
 
-This project serves as a proof of work for the **Head of Product** role, demonstrating the intersection of technical depth, strategic vision, and data-driven execution.
+This project serves as a proof of work for the **Head of Product** role, demonstrating the intersection of technical depth, strategic vision (via the STEP framework), and data-driven execution.
