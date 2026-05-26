@@ -1,4 +1,4 @@
-# CheckoutIQ: PRD v2.1 (The STEP Strategic Framework)
+# CheckoutIQ: PRD (The STEP Strategic Framework)
 **AI-Driven Monetization & Global Payment Orchestration**
 
 > "This PRD utilizes the **STEP Framework** (Segments, Targets, Execution, Prioritization) to demonstrate structured AI Product Management leadership."
